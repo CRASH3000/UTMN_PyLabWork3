@@ -9,12 +9,12 @@ def hanoi_tower(n, source, target, auxiliary):
     """
     # Если диск один, просто переместить его на целевой стержень.
     if n == 1:
-        print(f"Переместить диск с {source} на {target}")
+        print(f"Переместить диск {n} с {source} на {target}")
         return
     # Сначала переместим n-1 дисков на вспомогательный стержень.
     hanoi_tower(n - 1, source, auxiliary, target)
     # После этого переместим оставшийся диск на целевой стержень.
-    print(f"Переместить диск с {source} на {target}")
+    print(f"Переместить диск {n} с {source} на {target}")
     # Теперь нужно переместить n-1 дисков с вспомогательного стержня на целевой.
     hanoi_tower(n - 1, auxiliary, target, source)
 
